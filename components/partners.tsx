@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './partners.module.css';
 
 function PartnersFrame(name: string) {
-  return <Image src={`/images/${name}.svg`} alt="Next.js Logo" width={257} height={37} priority />;
+  return <Image src={`/images/${name}.svg`} alt="Next.js Logo" width={247} height={57} priority />;
 }
 
 export default function Partners() {

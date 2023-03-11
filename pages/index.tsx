@@ -14,6 +14,7 @@ import Partners from '../components/partners';
 import License from '../components/license';
 import Description from '../components/description';
 import Statistic from '../components/statistic/statistic';
+import BlogsCarousel from '../components/blogsCarousel/blogsCarousel';
 
 const mainFeaturedPost = {
   title: 'Title of a longer',
@@ -43,6 +44,9 @@ export default function Home() {
       </div>
       <div style={{ marginTop: 90 }}>
         <Statistic />
+      </div>
+      <div style={{ margin: '90px 35px' }}>
+        <BlogsCarousel />
       </div>
       <br />
       <br />
