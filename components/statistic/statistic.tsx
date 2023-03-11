@@ -16,10 +16,10 @@ function StatisticBox({ text, number }: any) {
 export default function Statistic() {
   return (
     <Box className={styles.card} sx={{ height: { xs: 420, md: 160 }, margin: 5 }}>
-      <StatisticBox text={'განაცხადი'} number={256} />
-      <StatisticBox text={'დამტკიცებული'} number={145} />
-      <StatisticBox text={'გაცემული'} number={4500} />
-      <StatisticBox text={'განაცხადი'} number={256} />
+      <StatisticBox text={'განაცხადი'} number={'692 +'} />
+      <StatisticBox text={'დამტკიცებული'} number={'445 +'} />
+      <StatisticBox text={'გაცემული'} number={'45000₾ +'} />
+      <StatisticBox text={'განაცხადი'} number={'256 +'} />
     </Box>
   );
 }

@@ -55,7 +55,7 @@ export default function ProductCurds() {
         variant="h4"
         sx={{ display: 'flex', justifyContent: 'center', fontWeight: 800, fontSize: 28, margin: 5 }}
       >
-        Products
+        პროდუქტები
       </Typography>
 
       <Grid container justifyContent="center" spacing={4}>

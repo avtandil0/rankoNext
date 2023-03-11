@@ -31,7 +31,6 @@ import UserAvatar from './userAvatar';
 import Image from 'next/image';
 import styles from './header.module.css';
 
-
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 interface Props {
@@ -50,7 +49,6 @@ function RankoLogo() {
   return <Image src="/images/rankoLogo.svg" alt="Next.js Logo" width={106} height={38} priority />;
 }
 
-
 function ScrollTop(props: any) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -63,14 +61,11 @@ function ScrollTop(props: any) {
   });
 
   const handleClick = (event: any) => {
-    const anchor = (event.target.ownerDocument || document).querySelector(
-      '#back-to-top-anchor',
-    );
-
+    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
 
     if (anchor) {
-    console.log('asasas',anchor)
-      anchor.scrollIntoView({behavior: "smooth"});
+      console.log('asasas', anchor);
+      anchor.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -129,7 +124,7 @@ export default function Header(props: Props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText  primary={item} />
+              <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -139,46 +134,47 @@ export default function Header(props: Props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
-
   return (
-    <Box >
+    <Box>
       <CssBaseline />
       <HideOnScroll {...props}>
-      <AppBar component="nav">
-        <Toolbar style={{display: 'flex', justifyContent:'space-between', backgroundColor:'#FFFFFF'}}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, color:'#000' }}
+        <AppBar component="nav">
+          <Toolbar
+            style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}
           >
-            <MenuIcon />
-          </IconButton>
-          {/* <RankoLogo /> */}
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 11 }} />
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' }, color: '#000' }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+              <RankoLogo />
+            </Box>
+            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 11 }} />
 
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-
-            <RankoLogo />
-
-          </Typography>
-          <Box sx={{  display: { xs: 'none', md: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} className={styles.button}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-          <Box >
-            <UserAvatar />
-            {/* <Tooltip title="Open settings">
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            >
+              <RankoLogo />
+            </Typography>
+            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+              {navItems.map((item) => (
+                <Button key={item} className={styles.button}>
+                  {item}
+                </Button>
+              ))}
+            </Box>
+            <Box>
+              <UserAvatar />
+              {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <Avatar sx={{ bgcolor: deepOrange[500] }}>A</Avatar>
               </IconButton>
@@ -205,10 +201,9 @@ export default function Header(props: Props) {
                 </MenuItem>
               ))}
             </Menu> */}
-          </Box>
-        </Toolbar>
-      </AppBar>
-
+            </Box>
+          </Toolbar>
+        </AppBar>
       </HideOnScroll>
       <Toolbar id="back-to-top-anchor" />
       <Box component="nav">
@@ -235,7 +230,6 @@ export default function Header(props: Props) {
         </Fab>
       </ScrollTop>
       <BasicSpeedDial />
-
     </Box>
   );
 }
