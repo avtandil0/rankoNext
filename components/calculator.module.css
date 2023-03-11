@@ -1,0 +1,181 @@
+.calulatorTitle {
+  width: 144px;
+  height: 27px;
+
+  /* Body Large/Regular */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+
+  /* Primary/60 */
+
+  color: #9087cd;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.leftCardHorizontalLine {
+  width: 609px;
+  height: 0px;
+
+  /* Greyscale/10 */
+
+  border: 1px solid #f7f7fa;
+
+  /* Inside auto layout */
+
+}
+
+.leftTitle {
+  width: 396px;
+  height: 42px;
+  margin-top: 20px;
+  /* H2/Bold */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 150%;
+  /* identical to box height, or 42px */
+
+  /* Greyscale/100 */
+
+  color: #080537;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.rightCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+  gap: 16px;
+
+  /* width: 609px; */
+  /* height: 364px; */
+
+  /* Primary/5 */
+
+  background: #f6f5ff;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.rightTitle {
+  width: 246px;
+  height: 27px;
+
+  /* Body Large/Regular */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+}
+
+.result {
+  width: 155px;
+  height: 45px;
+
+  /* H1/Bold */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 140%;
+  /* identical to box height, or 45px */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.horizontalLine {
+  /* width: 545px; */
+  height: 0px;
+  border: 1px solid #ded9fd;
+}
+
+.rightColumn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.column {
+  width: 300px;
+}
+.rightLittleTitle {
+  width: 213px;
+  height: 24px;
+
+  /* Body/Regular */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.rightLittleContent {
+  width: 158px;
+  height: 36px;
+
+  /* H3/Semibold */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

@@ -9,45 +9,36 @@ import ProductCard from './productCard';
 import { Grid } from '@mui/material';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Image from "next/image";
+import Image from 'next/image';
 
+// wallet.svg
+function WalletIcon() {
+  return <Image src="/images/wallet.svg" alt="Next.js Logo" width={47} height={37} priority />;
+}
+//agriculture.svg
+function AgricultureIcon() {
+  return <Image src="/images/agriculture.svg" alt="Next.js Logo" width={47} height={37} priority />;
+}
+
+function CarIcon() {
+  return <Image src="/images/car.svg" alt="Next.js Logo" width={47} height={37} priority />;
+}
+
+function CardIcon() {
+  return <Image src="/images/cards.svg" alt="Next.js Logo" width={47} height={37} priority />;
+}
 
 function ConsumerIcon() {
-  return (
-    <Image
-    src="/images/consumer.svg"
-    alt="Next.js Logo"
-    width={47}
-    height={37}
-    priority
-  />
-  );
+  return <Image src="/images/consumer.svg" alt="Next.js Logo" width={47} height={37} priority />;
 }
 
 function HomeIcon() {
-  return (
-    <Image
-    src="/images/home.svg"
-    alt="Next.js Logo"
-    width={47}
-    height={37}
-    priority
-  />
-  );
+  return <Image src="/images/home.svg" alt="Next.js Logo" width={47} height={37} priority />;
 }
 
 function BusinessIcon() {
-  return (
-    <Image
-    src="/images/business.svg"
-    alt="Next.js Logo"
-    width={47}
-    height={37}
-    priority
-  />
-  );
+  return <Image src="/images/business.svg" alt="Next.js Logo" width={47} height={37} priority />;
 }
-
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -59,33 +50,54 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function ProductCurds() {
   return (
-    <div style={{margin: 15}}>
+    <div style={{ margin: 15 }}>
+      <Typography
+        variant="h4"
+        sx={{ display: 'flex', justifyContent: 'center', fontWeight: 800, fontSize: 28, margin: 5 }}
+      >
+        Products
+      </Typography>
 
-<Typography variant="h4" sx={{display: 'flex', justifyContent: 'center', fontWeight: 800, fontSize: 28, margin: 5}}>
-         Products
-        </Typography>
-
-    <Grid container justifyContent="center" spacing={4}>
-      <Grid  item>
-        <ProductCard icon={ConsumerIcon()}/>
-      </Grid>
-      <Grid  item>
-        <ProductCard icon={HomeIcon()}/>
-      </Grid>
-      <Grid  item>
-        <ProductCard icon={BusinessIcon()}/>
-      </Grid>
-      <Grid  item>
-        <ProductCard icon={HomeIcon()}/>
-      </Grid>
-      <Grid  item>
-        <ProductCard icon={ConsumerIcon()}/>
-      </Grid>
-      <Grid  item>
-        <ProductCard icon={HomeIcon()}/>
-      </Grid>
+      <Grid container justifyContent="center" spacing={4}>
+        <Grid item>
+          <ProductCard
+            name={'სამომხმარებლო სესხი'}
+            description={'მოგზაურობა, ნივთის შეძენა, გართობა'}
+            icon={WalletIcon()}
+          />
         </Grid>
+        <Grid item>
+          <ProductCard
+            name={'იპოთეკური სესხი'}
+            description={'რემონტი, მშენებლობა, სახლის შეძენა'}
+            icon={HomeIcon()}
+          />
+        </Grid>
+        <Grid item>
+          <ProductCard
+            name={'ბიზნეს სესხი'}
+            description={'ძირითადი საშუალებები, საბრუნავი საშუალებები'}
+            icon={BusinessIcon()}
+          />
+        </Grid>
+        <Grid item>
+          <ProductCard
+            name={'აგრო სესხი'}
+            description={'სოფლის მეურნეობისთვის'}
+            icon={AgricultureIcon()}
+          />
+        </Grid>
+        <Grid item>
+          <ProductCard
+            name={'საკრედიტო ბარათები'}
+            description={'საკრედიტო ბარათები'}
+            icon={CardIcon()}
+          />
+        </Grid>
+        <Grid item>
+          <ProductCard name={'ავტო სესხი'} description={'აგრო სესხი'} icon={CarIcon()} />
+        </Grid>
+      </Grid>
     </div>
-
   );
 }

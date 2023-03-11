@@ -1,0 +1,70 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 120px;
+
+  /* width: 1280px; */
+  /* height: 159px; */
+
+  /* Primary/80 */
+
+  background: #675ca9;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 6;
+  flex-grow: 0;
+}
+
+.number {
+  width: 92px;
+  height: 45px;
+
+  /* H1/Bold */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 140%;
+  /* identical to box height, or 45px */
+
+  /* System Color/White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.text {
+  width: 104px;
+  height: 27px;
+
+  /* Body Large/Bold */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+
+  /* System Color/White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}

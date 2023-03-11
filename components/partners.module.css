@@ -1,0 +1,24 @@
+.title {
+display: flex;
+justify-content: center;
+
+  /* width: 346.67px; */
+  height: 42px;
+
+  /* H2/Bold */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 150%;
+  /* identical to box height, or 42px */
+
+
+  /* Greyscale/100 */
+
+  color: #080537;
+
+  /* Inside auto layout */
+
+}

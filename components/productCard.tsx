@@ -18,23 +18,23 @@ const ColorButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-export default function ProductCard({icon}: any) {
+export default function ProductCard({icon, name, description}: any) {
   return (
-    <Card sx={{ width: {xs: 350, md: 411}, pt: 7, pb: 1,pl:1,  backgroundColor: '#4733FF',color: '#FFF', borderRadius: 3 }}>
+    <Card sx={{ width: {xs: 350, md: 411}, pt: 7, pb: 1,pl:1,
+    background: 'linear-gradient(61.18deg, #3929CC -5.47%, #4733FF 114.69%); ',color: '#FFF', borderRadius: 3 }}>
       <CardContent>
       {icon}
         <Typography variant="h5" component="div">
-         4521000 0 0 0 0s
+        {name}
         </Typography>
 
         <Typography variant="body2">
-          well meaning and kindly.
+         {description}
           <br />
-          {'"a benevolent smile"'}
         </Typography>
       </CardContent>
       <CardActions>
-        <ColorButton variant="contained">Custom CSS</ColorButton>
+        <ColorButton variant="contained">განაცხადის შევსება</ColorButton>
       </CardActions>
     </Card>
   );

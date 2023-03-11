@@ -1,0 +1,47 @@
+.card {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 64px 0px;
+  gap: 80px;
+
+  /* height: 209px; */
+
+  /* Primary/5 */
+
+  background: #f6f5ff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+.title {
+  /* width: 655px; */
+  height: 36px;
+
+  /* H3/Extrabold */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 800;
+  /* font-size: 24px; */
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  /* Greyscale/100 */
+
+  color: #080537;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
