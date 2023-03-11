@@ -1,0 +1,21 @@
+.button {
+  width: 120px;
+  height: 18px;
+
+  /* Body/Small/Semibold */
+
+  font-family: 'Noto Sans Georgian';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  /* identical to box height, or 18px */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

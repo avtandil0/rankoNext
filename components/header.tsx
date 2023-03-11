@@ -28,6 +28,8 @@ import MainFeaturedPost from './mainFeaturedPost';
 import ProductCurds from './productCurds';
 import BasicSpeedDial from './basicSpeedDial';
 import UserAvatar from './userAvatar';
+import Image from 'next/image';
+import styles from './header.module.css';
 
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -42,7 +44,11 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['პროდუქტები', 'ჩვენს შესახებ', 'ბლოგი'];
+
+function RankoLogo() {
+  return <Image src="/images/rankoLogo.svg" alt="Next.js Logo" width={106} height={38} priority />;
+}
 
 
 function ScrollTop(props: any) {
@@ -123,7 +129,7 @@ export default function Header(props: Props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText  primary={item} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -139,37 +145,33 @@ export default function Header(props: Props) {
       <CssBaseline />
       <HideOnScroll {...props}>
       <AppBar component="nav">
-        <Toolbar style={{display: 'flex', justifyContent:'space-between'}}>
+        <Toolbar style={{display: 'flex', justifyContent:'space-between', backgroundColor:'#FFFFFF'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }, color:'#000' }}
           >
             <MenuIcon />
           </IconButton>
+          {/* <RankoLogo /> */}
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 11 }} />
+
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            LOGO
+
+            <RankoLogo />
+
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{  display: { xs: 'none', md: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} className={styles.button}>
                 {item}
               </Button>
             ))}
