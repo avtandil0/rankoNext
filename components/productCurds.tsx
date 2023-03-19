@@ -11,6 +11,7 @@ import { experimentalStyled as styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Image from 'next/image';
 
+
 // wallet.svg
 function WalletIcon() {
   return <Image src="/images/wallet.svg" alt="Next.js Logo" width={47} height={37} priority />;
@@ -64,6 +65,7 @@ export default function ProductCurds() {
             name={'სამომხმარებლო სესხი'}
             description={'მოგზაურობა, ნივთის შეძენა, გართობა'}
             icon={WalletIcon()}
+            url={'/consumer'}
           />
         </Grid>
         <Grid item>
@@ -71,6 +73,7 @@ export default function ProductCurds() {
             name={'იპოთეკური სესხი'}
             description={'რემონტი, მშენებლობა, სახლის შეძენა'}
             icon={HomeIcon()}
+            url={'/mortgage'}
           />
         </Grid>
         <Grid item>
@@ -78,6 +81,7 @@ export default function ProductCurds() {
             name={'ბიზნეს სესხი'}
             description={'ძირითადი საშუალებები, საბრუნავი საშუალებები'}
             icon={BusinessIcon()}
+            url={'/bussiness'}
           />
         </Grid>
         <Grid item>
@@ -85,6 +89,7 @@ export default function ProductCurds() {
             name={'აგრო სესხი'}
             description={'სოფლის მეურნეობისთვის'}
             icon={AgricultureIcon()}
+            url={'/auto'}
           />
         </Grid>
         <Grid item>
@@ -92,6 +97,7 @@ export default function ProductCurds() {
             name={'საკრედიტო ბარათები'}
             description={'საკრედიტო ბარათები'}
             icon={CardIcon()}
+            url={'/creditCard'}
           />
         </Grid>
         <Grid item>
