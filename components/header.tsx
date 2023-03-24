@@ -98,8 +98,8 @@ function HideOnScroll(props: Props) {
   );
 }
 
-export default function Header(props: Props) {
-  const { window } = props;
+export default function Header() {
+  // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -132,12 +132,12 @@ export default function Header(props: Props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  // const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box>
       <CssBaseline />
-      <HideOnScroll {...props}>
+      <HideOnScroll >
         <AppBar component="nav">
           <Toolbar
             style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}
@@ -208,7 +208,7 @@ export default function Header(props: Props) {
       <Toolbar id="back-to-top-anchor" />
       <Box component="nav">
         <Drawer
-          container={container}
+          // container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
@@ -224,7 +224,7 @@ export default function Header(props: Props) {
         </Drawer>
       </Box>
 
-      <ScrollTop {...props}>
+      <ScrollTop >
         <Fab size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
