@@ -16,7 +16,7 @@
     "@emotion/styled": "latest",
     "@material-ui/core": "^5.0.0-beta.5",
     "@mui/icons-material": "latest",
-    "@mui/material": "latest",
+    "@mui/material": "5.12.1",
     "@next/font": "latest",
     "next": "latest",
     "react": "latest",
